@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Xiao Junyi
- * Date: 2019/2/1
- * Time: 18:58
- */
+
+
+
 
 namespace warehouse\publicfun;
-
-
 use common\PublicFunc;
 use Common\RedisService;
 use Xaircraft\Exception\ExceptionHelper;
@@ -55,9 +50,9 @@ class DistributedLocks
      * @param $lockKey
      * @param $token
      */
-    public function unlock($lockKey,$token)
+    public function unlock($lockKey)
     {
-      return  $this->unlockInstance($lockKey, $token);
+        return  $this->servers->del($lockKey);
 
     }
 
@@ -73,7 +68,6 @@ class DistributedLocks
     {
         $lockValue = time() + $lockValue;
         $lock =$this->servers->setnx($lockKey, $lockValue);
-
         /**
          * 满足两个条件中的一个即可进行操作
          * 1、上面一步创建锁成功;
@@ -87,14 +81,4 @@ class DistributedLocks
        return false;
     }
 
-    /**
-     * 解锁
-     * @param $lockKey
-     * @param $token
-     * @return mixed
-     */
-    private function unlockInstance($lockKey, $token)
-    {
-          return  $this->servers->del($lockKey);
-    }
 }
