@@ -9,18 +9,59 @@ Docker 使用 Google 公司推出的 Go 语言 进行开发实现，基于 Linux
 仓库（Repository）
 
 3.常用命令
-docker build -t   源目录 name:version  
-docker  run -d/守护模式  -p 800:80
-docker push 上传
-docker pull 下拉
-docker login 
-docker images 查看当前的镜像列表
-docker ps  查看当前运行的docker容器
-docker stop/start/restart   name/仓库id
-
+容器生命周期管理
+run -d 启动守护模式
+start/stop/restart  容器操作
+kill 杀掉进程
+rm  删除一个容器
+pause/unpause
+create 
+exec
+容器操作
+ps
+inspect
+top
+attach
+events
+logs
+wait
+export
+port
+容器rootfs命令
+commit
+cp
+diff
+镜像仓库
+login
+pull
+push
+search
+本地镜像管理
+images
+rmi
+tag
+build
+history
+save
+load
+import
+info|version
+info
+version
 
 其他概念：
 数据卷
 网络
+
+创建实名数据卷
+docker volume create my-vol
+创建匿名卷
+docker volume create
+查看数据卷列表
+docker volume ls
+查看具体的数据卷
+docker volume inspect my-vol
+删除数据卷
+docker volume rm my-vol
 
  

@@ -1,0 +1,4 @@
+安裝docker Elasticsearch 版本
+docker pull elasticsearch:7.9.3
+docker run -d --name es3 -p 9200:9200  -e "discovery.type=single-node"  -v /root/data/esdata:/usr/share/elasticsearch/data  32bb4bf1ee42
+-v /root/data/esdata:/usr/share/elasticsearch/data    指定本机目录为docket存储目录
