@@ -16,7 +16,7 @@ kill 杀掉进程
 rm  删除一个容器
 pause/unpause
 create 
-exec
+exec 进入一个base命令
 容器操作
 ps
 inspect

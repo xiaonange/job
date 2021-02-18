@@ -1,0 +1,6 @@
+FROM scratch　　　　　　　　
+MAINTAINER  zenglingwen"630118900@qq.com"
+WORKDIR $GOPATH/src/study_gin
+COPY study_gin ./index　
+EXPOSE 8080
+CMD ["./index"]
