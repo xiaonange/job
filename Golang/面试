@@ -72,8 +72,9 @@
 答：sync.Mutex 互斥鎖，sync.RWMutex 讀寫鎖
     1.互斥鎖：兩種操作：获取锁和释放锁,兩種模式：正常模式和饥饿模式,為了防止最後面的wait的Goroutine一直處於等待狀態，当waiter超过 1ms 没有获取到锁，它就会将当前互斥锁切换到饥饿模式
         ，防止等待队列中的waiter被饿死。
-     用互斥鎖實現的官方包：sync.map,sync.once
-    2.讀寫鎖：四種操作：读上锁 读解锁 写上锁 写解锁
+     用互斥鎖實現的官方包：sync.once
+    2.讀寫鎖：四種操作：读上锁 读解锁 写上锁
+      用读写锁实现的办法:sync.map
     3.其他：sync.waitgroup裡面定義的辦法和互斥鎖一樣有兩個操作：Lock，unlock,它的Add操作依靠的是原子鎖atomic.AddUint64,輕量級的原子鎖
 
 18：go的channel的用法，對他的理解
