@@ -39,7 +39,7 @@ WAL：WAL的全称是Write- Ahead Logging，它的关键点就是先写日志，
     binlog记录了对MySQL数据库执行更改的所有操作，但是不包括SELECT和SHOW这类操作
 
 4.MySQL的binlog有几种录入格式？分别有什么区别？
-答：statement, row和mixed
+答：statement（ˈsteɪtmənt）, row和mixed
   statement：记录每一条sql语句，不需要记录每一行的变化，减少了binlog日志量，节约了I0，提高性能
   row:保存每一行变动，不记录上下文信息，数据量大
   mixed：先用statement，无法使用再用row
@@ -82,7 +82,7 @@ WAL：WAL的全称是Write- Ahead Logging，它的关键点就是先写日志，
     3.行锁 - [ record Locks、gap locks、next-key locks、Insert Intention Locks ]
      3.1行级锁：
          Record Lock：单个行记录上的锁，只锁定记录本身。是针对索引记录（index record）的锁定
-         Gap Lock：间隙锁，锁定一个范围，但不包括记录本身。 目的是为了防止同一个事物的两次当前读，出现幻读的情况
+         Gap（gap） Lock：间隙锁，锁定一个范围，但不包括记录本身。 目的是为了防止同一个事物的两次当前读，出现幻读的情况
          Next-Key Lock（特殊间隙锁）：1+2,锁定一个范围，并锁定记录本身。目的：解决幻读
     4.自增锁 - [ auto-inc locks ]
 参考：https://blog.csdn.net/taoerchun/article/details/109013032
