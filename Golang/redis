@@ -16,7 +16,15 @@ redis多路复用：epoll
 3、Redis相比memcached有哪些优势？
 4、Redis有哪些适合的场景？
 5、Redis有哪几种数据淘汰策略？
+答：noeviction:返回错误当内存限制达到，并且客户端尝试执行会让更多内存被使用的命令。
+  allkeys-lru: 尝试回收最少使用的键（LRU），使得新添加的数据有空间存放。
+  volatile-lru: 尝试回收最少使用的键（LRU），但仅限于在过期集合的键,使得新添加的数据有空间存 放。
+  allkeys-random: 回收随机的键使得新添加的数据有空间存放。
+  volatile-random: 回收随机的键使得新添加的数据有空间存放，但仅限于在过期集合的键。
+  volatile-ttl: 回收在过期集合的键，并且优先回收存活时间（TTL）较短的键,使得新添加的数据有空间 存放
+
 6、使用过Redis分布式锁么，它是什么回事？
+
 7、假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来？
 8、由7接着问：如果这个redis正在给线上的业务提供服务，那使用keys指令会有什么问题？
 9、如果有大量的key需要设置同一时间过期，一般需要注意什么？
@@ -26,6 +34,7 @@ redis多路复用：epoll
 13、如果对方追问redis如何实现延时队列？
 14、说说Redis哈希槽的概念？
 15、Redis中的Pipeline有什么好处，为什么要用pipeline？
+
 16、Redis与其他key-value存储有什么不同？
 17、Redis和Redisson有什么关系？
 18、Jedis与Redisson对比有什么优缺点？

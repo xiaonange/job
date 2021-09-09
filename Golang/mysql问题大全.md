@@ -33,6 +33,7 @@ WAL：WAL的全称是Write- Ahead Logging，它的关键点就是先写日志，
 
 2.redo log和undo log说一下，什么是WAL技术?
 答：持久性redolog，原子性undo log,
+WAL，全称是Write-Ahead Logging， 预写日志系统。指的是 MySQL 的写操作并不是立刻更新到磁盘上，而是先记录在日志上，然后在合适的时间再更新到磁盘上。
 
 3.redo log和bin log的区别
 答：redo log又称重做日志文件，用于记录事务操作的变化，记录的是数据修改之后的值
