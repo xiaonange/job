@@ -7,11 +7,11 @@ import (
 
 func main() {
 	client := redis.NewClient(&redis.Options{
-		Addr:     "121.37.247.194:6379",
-		Password: "Shijian@123456", // no password set
-		DB:       0,                // use default DB
+		Addr:     "120.25.121.92:56379",
+		Password: "changliao2021", // no password set
+		DB:       0,               // use default DB
 	})
-    //redis.FailoverOptions{}
+	//redis.FailoverOptions{}
 	pong, err := client.Ping().Result()
 	//sb :=redis.NewFailoverClient( &redis.FailoverOptions{})
 	fmt.Println(pong, err)
@@ -19,7 +19,8 @@ func main() {
 	//TestHset(client)
 
 	//list
-	//TestList(client)
+	TestList(client)
+	//client.Del("taskList")
 
 	//set 无序
 	//TestSet(client)
@@ -32,16 +33,6 @@ func main() {
 	//TestPush(client)
 
 	//key和scan
-	err = client.Set("aaa","bbb",0).Err()
-	err = client.Set("bbb","bbb",0).Err()
-	err = client.Set("bcc","bbb",0).Err()
-	err = client.Set("acc","bbb",0).Err()
-	fmt.Print(err)
-	keys,err :=client.Keys("a*").Result()
-	fmt.Print(keys,err)
-	result,num,err :=client.Scan(0,"",10).Result()
-	fmt.Print(result,num,err)
-
 
 }
 
@@ -66,39 +57,38 @@ func TestString(client *redis.Client) {
 	}
 }
 
-func TestHset(client *redis.Client)  {
+func TestHset(client *redis.Client) {
 	type User struct {
 		Name string `json:"name"`
 		Guid string `json:"guid"`
 	}
 	//user_info := User{Name: "测试啊",Guid:"ddddd"}
 
-	is_true,err := client.HSet("user_info","name" ,"测试啊").Result()
+	is_true, err := client.HSet("user_info", "name", "测试啊").Result()
 	fmt.Println(is_true, err)
-	result,err :=client.HGet("user_info","name").Result()
+	result, err := client.HGet("user_info", "name").Result()
 	fmt.Print(result)
 	//批量
-	hmstring,err :=client.HMSet("student", map[string]interface{}{"name":"zlw","guid":"xxxx"}).Result()
-	hmstring,err =client.HMSet("student", map[string]interface{}{"name":"like"}).Result()
+	hmstring, err := client.HMSet("student", map[string]interface{}{"name": "zlw", "guid": "xxxx"}).Result()
+	hmstring, err = client.HMSet("student", map[string]interface{}{"name": "like"}).Result()
 	fmt.Println(hmstring, err)
-	hmreult,err :=client.HMGet("student","name","guid").Result()
+	hmreult, err := client.HMGet("student", "name", "guid").Result()
 	fmt.Println(hmreult, err)
 }
 
 func TestList(client *redis.Client) {
-	type User struct {
-		Name string `json:"name"`
-		Guid string `json:"guid"`
-	}
-	user_info := User{Name: "测试啊",Guid:"ddddd"}
-	_, err := client.RPush("list", "sjsjjs", "xxxxx",user_info).Result()
-	fmt.Println(err)
+	_, err := client.RPush("list", "sjsjjs", "xxxxx").Result()
 	num, err := client.LLen("list").Result()
 	fmt.Println(num, err)
-	for i := num; i > 0; i-- {
+	//voiceSendList   api队列
+	data, err := client.LRange("voiceSendList", 0, -1).Result()
+	for _, v := range data {
+		fmt.Print(v)
+	}
+	/*for i := num; i > 0; i-- {
 		listRus, err := client.RPop("list").Result()
 		fmt.Println(listRus, err)
-	}
+	}*/
 }
 
 func TestSet(client *redis.Client) {
@@ -110,25 +100,25 @@ func TestSet(client *redis.Client) {
 	fmt.Println(data, err)
 }
 
-func TestZset(client *redis.Client)  {
+func TestZset(client *redis.Client) {
 	_, err := client.ZAdd("score", redis.Z{Score: 10, Member: "2222"}).Result()
 	_, err = client.ZAdd("score", redis.Z{Score: 9, Member: "333"}).Result()
-	result,err :=client.ZRange("score",0,3).Result()
+	result, err := client.ZRange("score", 0, 3).Result()
 	fmt.Println(result, err)
-	result,err =client.ZRevRange("score",0,3).Result()
+	result, err = client.ZRevRange("score", 0, 3).Result()
 	fmt.Println(result, err)
-	score,err :=client.ZScore("score","333").Result()
+	score, err := client.ZScore("score", "333").Result()
 	fmt.Println(score, err)
 }
 
-func TestPush(client *redis.Client)  {
-	err := client.Publish("chat","aaaaa").Err()
-	fmt.Println( err)
+func TestPush(client *redis.Client) {
+	err := client.Publish("chat", "aaaaa").Err()
+	fmt.Println(err)
 }
 
-func TestSubscribe(client *redis.Client){
+func TestSubscribe(client *redis.Client) {
 	//参数1 频道名 字符串类型
-	pubsub :=client.Subscribe("chat")
+	pubsub := client.Subscribe("chat")
 	_, err := pubsub.Receive()
 	if err != nil {
 		return
@@ -137,9 +127,9 @@ func TestSubscribe(client *redis.Client){
 	/*for msg := range ch {
 		fmt.Println( msg.Channel, msg.Payload, "\r\n")
 	}*/
-	for{
-		select{
-		case message, ok :=<-ch:
+	for {
+		select {
+		case message, ok := <-ch:
 			if !ok {
 				return
 			}
