@@ -9,7 +9,7 @@ import (
 )
 
 var client *elastic.Client
-var host = "http://159.138.33.253:9200"
+var host = "http://192.168.8.200:9200"
 
 type Employee struct {
 	FirstName string   `json:"first_name"`
@@ -28,17 +28,17 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	_, _, err = client.Ping(host).Do(context.Background())
+	info, code, err := client.Ping(host).Do(context.Background())
 	if err != nil {
 		panic(err)
 	}
-	//fmt.Printf("Elasticsearch returned with code %d and version %s ", code, info.Version.Number)
+	fmt.Printf("Elasticsearch returned with code %d and version %s ", code, info.Version.Number)
 
-	_, err = client.ElasticsearchVersion(host)
+	esversion, err := client.ElasticsearchVersion(host)
 	if err != nil {
 		panic(err)
 	}
-	//fmt.Printf("Elasticsearch version %s ", esversion)
+	fmt.Printf("Elasticsearch version %s ", esversion)
 
 }
 
@@ -210,7 +210,7 @@ func main() {
 	//update()
 	//gets()
 	//使用结构体
-	/*e1 := Employee{"zeng", "xiaonange", 18, "I like to collect rock albums", []string{"music"}}
+	e1 := Employee{"zeng", "xiaonange", 18, "I like to collect rock albums", []string{"music"}}
 	_, err := client.Index().
 		Index("megacorp").
 		Type("employee").
@@ -219,14 +219,15 @@ func main() {
 		Do(context.Background())
 	if err != nil {
 		panic(err)
-	}*/
+	}
 	var res *elastic.SearchResult
 	matchPhraseQuery := elastic.NewMatchPhraseQuery("first_name", "zeng")
-	res, _ = client.Search("megacorp").Type("employee").Query(matchPhraseQuery).Do(context.Background())
+	res, err = client.Search("megacorp").Type("employee").Query(matchPhraseQuery).Do(context.Background())
+	fmt.Println(res)
 	var typ Employee
 	for _, item := range res.Each(reflect.TypeOf(typ)) { //从搜索结果中取数据的方法
 		t := item.(Employee)
-		fmt.Printf("%#v", t.FirstName+t.LastName)
+		fmt.Println("%s", t.FirstName+t.LastName)
 	}
 	//query()
 	//list(2,1)

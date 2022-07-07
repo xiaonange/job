@@ -21,13 +21,14 @@ func NewKafkaConsumer(address []string) {
 	defer consumer.Close()
 
 	//根据消费者获取指定的主题分区的消费者,Offset这里指定为获取最新的消息.
-	partitionConsumer, err := consumer.ConsumePartition("logstash_test", 0, sarama.OffsetNewest)
+	partitionConsumer, err := consumer.ConsumePartition("testTopic", 0, sarama.OffsetNewest)
 	if err != nil {
 		fmt.Println("error get partition consumer", err)
 	}
 	defer partitionConsumer.Close()
 	//循环等待接受消息.
 	for {
+		fmt.Println("error get partition consumer", err)
 		select {
 		//接收消息通道和错误通道的内容.
 		case msg := <-partitionConsumer.Messages():
