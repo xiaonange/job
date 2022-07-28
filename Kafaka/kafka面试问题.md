@@ -22,4 +22,9 @@
 5.topic和parttion的差别
 topic 是逻辑上的概念，而 partition 是物理上的概念
 
+6.kafka多分组消费
+  多分区才是kafka高性能，高吞吐量的良好配置
+  kafka一个分组里面的用户只能消费一个分区
+
+
  参考文章：https://segmentfault.com/a/1190000041783254
