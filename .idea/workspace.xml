@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="16524974-c9d5-46cc-87c0-938b40993243" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Kafaka/kafka面试问题" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/job-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/job-.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Elasticsearch/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Elasticsearch/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafaka/client/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/Kafaka/client/consumer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafaka/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Kafaka/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redis/面试问题/排行榜.md" beforeDir="false" afterPath="$PROJECT_DIR$/Redis/面试问题/排行榜.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂项/Grpc/服务注册与发现.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂项/message_list/remark.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂项/minio/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂项/minio/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂项/minio/test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂项/suanfa/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Golang/Golang面试.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/Golang面试.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Golang/mysql问题大全.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/mysql问题大全.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafaka/kafka面试问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/Kafaka/kafka面试问题.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redis/redis21问.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Redis/redis21问.txt" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,9 +145,11 @@
       <dir>D:\Gopath\src\job\杂项</dir>
     </dirStrings>
   </component>
-  <component name="GOROOT" path="D:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -210,12 +208,19 @@
       </list>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1555" />
     <option name="height" value="850" />
   </component>
+  <component name="ProjectId" id="2Zn1pKfE399eVi8QOYaO9xvxxp2" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -273,19 +278,26 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="GO_FMT" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/job&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Gopath\src\job\Zookeeper" />
@@ -301,35 +313,26 @@
       <recent name="D:\work\xm\job-\Redis\分布式锁" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="job-" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Golang/leetcode/main.go" />
       <package value="job" />
       <directory value="$PROJECT_DIR$/" />
-      <output_directory value="D:\Gopath\src\job" />
+      <filePath value="$PROJECT_DIR$/Golang/leetcode/main.go" />
+      <output_directory value="D:/Gopath/src/job" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build main.go" />
-      </list>
-    </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-467a64f6063b-ee0e143f3e2b-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.11799.286" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -413,14 +416,50 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="cd448a7f-5274-4457-b738-08d7ead8188d" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="cd448a7f-5274-4457-b738-08d7ead8188d">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新" />
     <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Golang/linux常見問題">
