@@ -96,7 +96,19 @@ ziplistÀàËÆÓÚË«ÏòÁ´±í£¬µ«ÊÇËü²»´æ´¢ÉÏÒ»¸ö½ÚµãºÍÏÂÒ»¸ö½ÚµãµÄÖ¸Õë£¬¶øÊÇ´æ´¢ÉÏÒ»¸ö½
 14.Êý¾ÝÒ»ÖÂÐÔ
 ×îÁ÷ÐÐµÄ½â¾ö·½°¸Ö®Ò»¾ÍÊÇÑÓÊ±Ë«É¾²ßÂÔ
 ÏÈ½øÐÐ»º´æÇå³ý£¬ÔÙÖ´ÐÐupdate£¬×îºó£¨ÑÓ³ÙNÃë£©ÔÙÖ´ÐÐ»º´æÇå³ý¡£
-				 
+
+ 15.redis³Ö¾Ã»¯ÓÐÄÇÐ©·½Ê½
+   ´ð£ºµÚÒ»ÖÖÊÇRDB¿ìÕÕ£¬µÚ¶þÖÖÊÇ AOF ÈÕÖ¾¡£µÚÈýÕß Redis 4.0 »ìºÏ³Ö¾Ã»¯
+       RDB£º
+       ¿ìÕÕÊÇÒ»´ÎÈ«Á¿±¸·Ý£¬¿ìÕÕÊÇ¶þßMÖÆÎÄ¼þ£¬´æƒ¦¾oœ£¬ÈÝÁ¿±ÈAOFÎÄ¼þÐ¡£¬»ÖÍËÙ¶È¿ì
+       ÊÖ¶¯ÃüÁî£º
+       save:
+       ¶ÂÈûredis½ø³Ì£¬ÐèÒªµÈ
+       bgsave:
+
+       AOF£º
+        ÓÅµã Ö»ÊÇ×·¼ÓÐ´ÈÕÖ¾ÎÄ¼þ£¬¶Ô·þÎñÆ÷ÐÔÄÜÓ°Ïì½ÏÐ¡£¬ËÙ¶È±ÈRDBÒª¿ì£¬ÏûºÄµÄÄÚ´æ½ÏÉÙ
+        È±µã AOF·½Ê½Éú³ÉµÄÈÕÖ¾ÎÄ¼þÌ«´ó£¬ÐèÒª²»¶ÏAOFÖØÐ´£¬½øÐÐÊÝÉí¡£×xÈ¡»ÖÍËÙ¶ÈÂý
   
   
   
