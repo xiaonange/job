@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16524974-c9d5-46cc-87c0-938b40993243" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/job-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/job-.iml" afterDir="false" />
+    <list default="true" id="16524974-c9d5-46cc-87c0-938b40993243" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/Golang/mysql數據庫.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Golang/Golang面试.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/Golang面试.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Golang/Golang面试.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/Golang面试.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Golang/mysql數據庫.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Golang/mysql问题大全.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/mysql问题大全.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafaka/kafka面试问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/Kafaka/kafka面试问题.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Golang/分布式事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/分布式事务.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Golang/數據結構.md" beforeDir="false" afterPath="$PROJECT_DIR$/Golang/數據結構.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafaka/kafka面试问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/Kafaka/kafka面试问题.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Redis/redis21问.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Redis/redis21问.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tcp/tcp.md" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp/tcp.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +152,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
@@ -207,6 +214,9 @@
         <option value="$PROJECT_DIR$/Kafaka/kafka面试问题" />
       </list>
     </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="cg5blmbr" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -289,13 +299,19 @@
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;G:/job&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -355,7 +371,21 @@
       <workItem from="1595469751144" duration="599000" />
       <workItem from="1595815070369" duration="583000" />
       <workItem from="1595900956622" duration="5459000" />
+      <workItem from="1708917855655" duration="191000" />
+      <workItem from="1708918058924" duration="231000" />
+      <workItem from="1708918298873" duration="47000" />
+      <workItem from="1708918355844" duration="4486000" />
+      <workItem from="1709132646395" duration="1859000" />
     </task>
+    <task id="LOCAL-00001" summary="Default Changelist">
+      <option name="closed" value="true" />
+      <created>1708927737381</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708927737381</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -456,7 +486,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
